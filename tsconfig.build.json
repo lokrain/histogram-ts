@@ -1,0 +1,12 @@
+// tsconfig.build.json
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist"
+    },
+    "exclude": [ "**/*.test.*", "**/__tests__/**", "**/demo/**" ]
+}
