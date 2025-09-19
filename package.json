@@ -1,0 +1,46 @@
+{
+  "name": "histogram-ts",
+  "version": "1.0.0",
+  "description": "A framework-agnostic histogram engine for TypeScript. Accepts numeric arrays or objects via accessors. Supports Sturges/Scott/FD auto binning, fixed width/count, closed-left/right edges, under/overflow handling, weights, count/percent/density and cumulative metrics. Returns immutable bins plus descriptive stats (n, min/max, mean, sd, iqr).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint && npm run build"
+  },
+  "keywords": [
+    "histogram",
+    "statistics",
+    "data-visualization",
+    "typescript",
+    "binning",
+    "data-analysis"
+  ],
+  "author": "",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
